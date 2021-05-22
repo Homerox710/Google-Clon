@@ -8,18 +8,31 @@
 html{
 	font-size: 62.5%;/*Esto se hace para que podamos hacer que cada rem sean 10 pixeles*/
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 a{
     text-decoration: none;
     cursor: pointer;
 }
 header{
     width: 100%;
-    height: 60px;
+    height: 6rem;
 }
 
 header nav {
     display: flex;
     justify-content: flex-end;
+}
+
+header ul{
+    margin: 1rem;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
 }
 
 header nav .nav-right-section{
@@ -134,4 +147,37 @@ main .main-buttons button:hover{
     box-shadow: 0px 1px 1px rgba(0,0,0,0.1);    
     color: #222;
     cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    display: grid;/*Generamos una cuadricula*/
+    grid-template-columns: 1fr 1fr;/*Esta propiedad nos permite fraccionar el footer */
+    align-items: center;
+    font-size: 1.3rem;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul{
+    margin: 1rem;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+footer .footer-left{
+    justify-content: left;
+}
+
+footer .footer-right{
+    justify-content: flex-end;
+}
+
+footer ul li a{
+    margin: 1rem;
+    color: #5f6368;
 }
